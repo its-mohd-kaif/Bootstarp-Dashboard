@@ -1,0 +1,26 @@
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+.badge-number {
+  /* position: absolute; */
+
+  /* font-weight: normal; */
+  /* font-size: 12px; */
+  /* padding: 3px 6px; */
+  /* padding-top: 3px; */
+  /* padding-bottom: 3px; */
+  /* padding-left: 6px; */
+}
+.offcanvas-backdrop.show{
+opacity: 0.1;
+}
+
+.homeContainer{
+  background-color: #d2e0fc;
+}
+.my-dropdown-toggle::after {
+  content: none;
+}
+.dropdown-toggle::after {
+  display:none;
+}
