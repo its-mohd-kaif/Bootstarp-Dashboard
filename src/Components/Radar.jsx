@@ -1,7 +1,7 @@
 // install (please make sure versions match peerDependencies)
 // yarn add @nivo/core @nivo/radar
 import { ResponsiveRadar } from "@nivo/radar";
-import { radarData } from "../radarData";
+import { radarData } from "../Data Folder/radarData";
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
 // no chart will be rendered.

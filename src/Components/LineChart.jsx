@@ -1,7 +1,7 @@
 // install (please make sure versions match peerDependencies)
 // yarn add @nivo/core @nivo/line
 import { ResponsiveLine } from "@nivo/line";
-import { data } from "../data";
+import { data } from "../Data Folder/data";
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
 // no chart will be rendered.

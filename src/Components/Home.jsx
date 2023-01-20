@@ -7,6 +7,7 @@ import "../App.css";
 import "./Home.css";
 import MyResponsiveLine from "./LineChart";
 import MyResponsiveRadar from "./Radar";
+import MyResponsivePie from "./PieChart";
 function Home() {
   return (
     <section style={{ paddingLeft: "1em" }} className="homeContainer">
@@ -369,6 +370,55 @@ function Home() {
                 </Card.Title>
                 <Card.Text style={{ height: "250px" }}>
                   <MyResponsiveRadar />
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+          {/* Pie Chart */}
+          <div>
+            <Card style={{ width: "100%", padding: "1em", marginTop: "2em" }}>
+              <Card.Body>
+                <Card.Title>
+                  <span style={{ color: "#012970" }}>Website Traffic</span>{" "}
+                  <span style={{ color: "#8e9fbf" }}>| Today</span>
+                  <span style={{ float: "right" }}>
+                    <div class="dropdown">
+                      <button
+                        style={{
+                          background: "transparent",
+                          color: "blue",
+                          border: "none",
+                        }}
+                        class="btn btn-secondary "
+                        type="button"
+                        id="dropdownMenu2"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ...
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li>
+                          <button class="dropdown-item" type="button">
+                            Today
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" type="button">
+                            This Month
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" type="button">
+                            Year
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </span>
+                </Card.Title>
+                <Card.Text style={{ height: "250px" }}>
+                  <MyResponsivePie />
                 </Card.Text>
               </Card.Body>
             </Card>
