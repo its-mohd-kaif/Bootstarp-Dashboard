@@ -1,13 +1,17 @@
 import React from "react";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Card from "react-bootstrap/Card";
-import Dropdown from "react-bootstrap/Dropdown";
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import "../App.css";
 import "./Home.css";
 import MyResponsiveLine from "./LineChart";
 import MyResponsiveRadar from "./Radar";
 import MyResponsivePie from "./PieChart";
+import CustomerTbl from "./CustomerTbl";
+import ProductTbl from "./ProductTbl";
+import NewsTbl from "./NewsTbl";
+import Footer from "./Footer";
+// Home Component
 function Home() {
   return (
     <section style={{ paddingLeft: "1em" }} className="homeContainer">
@@ -16,10 +20,13 @@ function Home() {
         <Breadcrumb.Item active>Data</Breadcrumb.Item>
         <Breadcrumb.Item active>Dashboard</Breadcrumb.Item>
       </Breadcrumb>
-      <div className="d-flex flex-wrap justify-content-around">
-        <div style={{ width: "69%" }}>
-          <div className="d-flex flex-wrap justify-content-around">
-            <Card style={{ width: "27rem", padding: "1em", margin: "0.5em" }}>
+      <div className="sectionRow">
+        <div className="mainColumn1">
+          <div className="d-flex flex-wrap justify-content-between cardRow">
+            <Card
+              className="cardColum1"
+              style={{ width: "49%", padding: "1em" }}
+            >
               <Card.Body>
                 <Card.Title>
                   <span style={{ color: "#012970" }}>Sales</span>{" "}
@@ -32,7 +39,7 @@ function Home() {
                           color: "blue",
                           border: "none",
                         }}
-                        class="btn btn-secondary "
+                        className="btn btn-secondary "
                         type="button"
                         id="dropdownMenu2"
                         data-bs-toggle="dropdown"
@@ -61,7 +68,10 @@ function Home() {
                   </span>
                 </Card.Title>
                 <Card.Text className="row gx-1">
-                  <div style={{ marginTop: "1em" }} className="col">
+                  <div
+                    style={{ marginTop: "1em", padding: "1em" }}
+                    className="col"
+                  >
                     <i
                       className="fas fa-shopping-cart"
                       style={{ fontSize: "36px", color: "#012970" }}
@@ -75,7 +85,7 @@ function Home() {
                 </Card.Text>
               </Card.Body>
             </Card>
-            <Card style={{ width: "27rem", padding: "1em", margin: "1em" }}>
+            <Card style={{ width: "49%", padding: "1em" }}>
               <Card.Body>
                 <Card.Title>
                   <span style={{ color: "#012970" }}>Revenue</span>{" "}
@@ -88,7 +98,7 @@ function Home() {
                           color: "blue",
                           border: "none",
                         }}
-                        class="btn btn-secondary "
+                        className="btn btn-secondary "
                         type="button"
                         id="dropdownMenu2"
                         data-bs-toggle="dropdown"
@@ -148,7 +158,7 @@ function Home() {
                           color: "blue",
                           border: "none",
                         }}
-                        class="btn btn-secondary "
+                        className="btn btn-secondary "
                         type="button"
                         id="dropdownMenu2"
                         data-bs-toggle="dropdown"
@@ -207,6 +217,104 @@ function Home() {
                           color: "blue",
                           border: "none",
                         }}
+                        className="btn btn-secondary "
+                        type="button"
+                        id="dropdownMenu2"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ...
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li>
+                          <button class="dropdown-item" type="button">
+                            Today
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" type="button">
+                            This Month
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" type="button">
+                            Year
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </span>
+                </Card.Title>
+                <Card.Text style={{ width: "99%", height: "450px" }}>
+                  <MyResponsiveLine />
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+          {/* Customer Table */}
+          <div>
+            <Card style={{ width: "100%", padding: "1em", marginTop: "2em" }}>
+              <Card.Body>
+                <Card.Title>
+                  <span style={{ color: "#012970" }}>Recent Sales</span>{" "}
+                  <span style={{ color: "#8e9fbf" }}> | Today</span>
+                  <span style={{ float: "right" }}>
+                    <div class="dropdown">
+                      <button
+                        style={{
+                          background: "transparent",
+                          color: "blue",
+                          border: "none",
+                        }}
+                        className="btn btn-secondary "
+                        type="button"
+                        id="dropdownMenu2"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ...
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li>
+                          <button class="dropdown-item" type="button">
+                            Today
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" type="button">
+                            This Month
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" type="button">
+                            Year
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </span>
+                </Card.Title>
+                <Card.Text>
+                  <CustomerTbl />
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+          {/* Product Table */}
+          <div>
+            <Card style={{ width: "100%", padding: "1em", marginTop: "2em" }}>
+              <Card.Body>
+                <Card.Title>
+                  <span style={{ color: "#012970" }}>Top Selling</span>{" "}
+                  <span style={{ color: "#8e9fbf" }}> | Today</span>
+                  <span style={{ float: "right" }}>
+                    <div class="dropdown">
+                      <button
+                        style={{
+                          background: "transparent",
+                          color: "blue",
+                          border: "none",
+                        }}
                         class="btn btn-secondary "
                         type="button"
                         id="dropdownMenu2"
@@ -235,14 +343,14 @@ function Home() {
                     </div>
                   </span>
                 </Card.Title>
-                <Card.Text style={{ height: "450px" }}>
-                  <MyResponsiveLine />
+                <Card.Text>
+                  <ProductTbl />
                 </Card.Text>
               </Card.Body>
             </Card>
           </div>
         </div>
-        <div style={{ width: "30%" }}>
+        <div className="mainColumn2">
           <Card>
             <Card.Body style={{ marginBottom: "-4em" }}>
               <Card.Title>
@@ -423,7 +531,59 @@ function Home() {
               </Card.Body>
             </Card>
           </div>
+          {/* News */}
+          <div>
+            <Card style={{ width: "100%", padding: "1em", marginTop: "2em" }}>
+              <Card.Body>
+                <Card.Title>
+                  <span style={{ color: "#012970" }}>News & Updates </span>{" "}
+                  <span style={{ color: "#8e9fbf" }}>| Today</span>
+                  <span style={{ float: "right" }}>
+                    <div class="dropdown">
+                      <button
+                        style={{
+                          background: "transparent",
+                          color: "blue",
+                          border: "none",
+                        }}
+                        class="btn btn-secondary "
+                        type="button"
+                        id="dropdownMenu2"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ...
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li>
+                          <button class="dropdown-item" type="button">
+                            Today
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" type="button">
+                            This Month
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" type="button">
+                            Year
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </span>
+                </Card.Title>
+                <Card.Text>
+                  <NewsTbl />
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </section>
   );

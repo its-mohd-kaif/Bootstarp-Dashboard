@@ -1,3 +1,4 @@
+// Line Chart Data
 export const data = [
   {
     id: "japan",

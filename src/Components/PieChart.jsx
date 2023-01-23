@@ -1,13 +1,7 @@
-// install (please make sure versions match peerDependencies)
-// yarn add @nivo/core @nivo/pie
 import { ResponsivePie } from "@nivo/pie";
 import { pieData } from "../Data Folder/pieData";
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
-// no chart will be rendered.
-// website examples showcase many properties,
-// you'll often use just a few of them.
 const MyResponsivePie = () => (
+  // Pie Chart Component
   <ResponsivePie
     data={pieData}
     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}

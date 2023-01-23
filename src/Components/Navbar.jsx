@@ -1,4 +1,3 @@
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -9,7 +8,7 @@ import logo from "../Images/logo.png";
 import user from "../Images/user.jpg";
 import Badge from "react-bootstrap/Badge";
 import Sidebar from "./Sidebar";
-
+// Navbar Component
 function NavBar() {
   return (
     <Navbar bg="light" expand="lg">
@@ -17,8 +16,8 @@ function NavBar() {
         <Navbar.Brand href="#">
           <img src={logo} alt="logo" />
         </Navbar.Brand>
-        <span style={{marginLeft:"7em"}}>
-        <Sidebar />
+        <span style={{ marginLeft: "7em" }}>
+          <Sidebar />
         </span>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -54,7 +53,7 @@ function NavBar() {
                 >
                   notifications_none
                 </i>
-                <Badge style={{top:"0"}} className="badge bg-primary badge-number">4</Badge>
+                <Badge className="badge bg-primary badge-number">4</Badge>
               </Nav.Link>
               <Nav.Link href="#action2">
                 <i
@@ -67,11 +66,17 @@ function NavBar() {
               </Nav.Link>
               <NavDropdown
                 title={
-                  <img
-                    style={{ width: "2em", borderRadius: "50%" }}
-                    src={user}
-                    alt="user"
-                  />
+                  <>
+                    <img
+                      style={{ width: "2em", borderRadius: "50%" }}
+                      src={user}
+                      alt="user"
+                    />
+                    <span style={{ color: "#0b3276", fontSize: "bolder" }}>
+                      {" "}
+                      K. Anderson
+                    </span>
+                  </>
                 }
                 id="navbarScrollingDropdown"
               >
@@ -87,7 +92,7 @@ function NavBar() {
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action4">
                   <span style={{ fontSize: "17px" }}>
-                    <i class="fa fa-user-o"></i> My Profile
+                    <i className="fa fa-user-o"></i> My Profile
                   </span>
                 </NavDropdown.Item>
 
@@ -95,7 +100,7 @@ function NavBar() {
 
                 <NavDropdown.Item href="#action4">
                   <span style={{ fontSize: "17px" }}>
-                    <i class="fas fa-sign-out-alt"></i> Sign out
+                    <i className="fas fa-sign-out-alt"></i> Sign out
                   </span>
                 </NavDropdown.Item>
               </NavDropdown>
