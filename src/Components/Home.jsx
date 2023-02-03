@@ -14,12 +14,19 @@ import Footer from "./Footer";
 // Home Component
 function Home() {
   return (
-    <section style={{ paddingLeft: "1em" }} className="homeContainer">
-      <h2>Dashboard</h2>
-      <Breadcrumb>
-        <Breadcrumb.Item active>Data</Breadcrumb.Item>
-        <Breadcrumb.Item active>Dashboard</Breadcrumb.Item>
-      </Breadcrumb>
+    <section
+      id="midSection"
+      style={{ paddingLeft: "1em" }}
+      className="homeContainer"
+    >
+      <div style={{marginTop:"4.92em"}}>
+        <h2>Dashboard</h2>
+        <Breadcrumb>
+          <Breadcrumb.Item active>Data</Breadcrumb.Item>
+          <Breadcrumb.Item active>Dashboard</Breadcrumb.Item>
+        </Breadcrumb>
+      </div>
+
       <div className="sectionRow">
         <div className="mainColumn1">
           <div className="d-flex flex-wrap justify-content-between cardRow">

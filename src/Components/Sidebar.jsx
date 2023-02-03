@@ -11,8 +11,19 @@ function Sidebar() {
   const [table, setTable] = useState(false);
   const [chart, setChart] = useState(false);
   const [icon, setIcon] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => {
+    setShow(false);
+    document.getElementById("midSection").style.marginLeft = "0";
+  };
+  const handleShow = () => {
+    if (show === false) {
+      setShow(true);
+      document.getElementById("midSection").style.marginLeft = "21em";
+    } else if (show === true) {
+      setShow(false);
+      document.getElementById("midSection").style.marginLeft = "0";
+    }
+  };
 
   return (
     <>
@@ -31,6 +42,8 @@ function Sidebar() {
         style={{ marginTop: "5em", width: "21em", color: "#00296f" }}
         show={show}
         onHide={handleClose}
+        backdrop={false}
+        scroll={true}
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>

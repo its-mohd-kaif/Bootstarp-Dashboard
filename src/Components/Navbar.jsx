@@ -11,7 +11,7 @@ import Sidebar from "./Sidebar";
 // Navbar Component
 function NavBar() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar fixed="top" bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">
           <img src={logo} alt="logo" />
